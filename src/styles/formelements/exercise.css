@@ -1,0 +1,17 @@
+.exercise {
+  clear: both;
+  overflow: hidden;
+  border: 1px dotted #ddd;
+  padding: 12px;
+}
+
+.exercise select,
+.exercise input {
+	float: left;
+	width: 200px;
+	margin-right: 12px;
+}
+
+.exercise .input__small {
+	width: 50px;
+}
