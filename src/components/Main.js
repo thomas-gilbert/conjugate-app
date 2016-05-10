@@ -3,10 +3,10 @@ require('styles/App.css');
 
 import React from 'react';
 
-import ControlPanelComponent from 'components/ControlPanelComponent.js';
+import ControlPanelComponent from 'components/controlpanel/ControlPanelComponent.js';
 import WeekComponent from 'components/week/WeekComponent.js';
 
-class AppComponent extends React.Component {
+class MainComponent extends React.Component {
 	render() {
 		return (
 			<div className="index">
@@ -22,7 +22,7 @@ class AppComponent extends React.Component {
 	}
 }
 
-AppComponent.defaultProps = {
+MainComponent.defaultProps = {
 };
 
-export default AppComponent;
+export default MainComponent;
