@@ -1,9 +1,6 @@
 'use strict';
 
 import React from 'react';
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux';
-import * as actions from '../../actions';
 import PercentageButton from 'components/controlpanel/PercentageButtonComponent.js';
 import WeightMeasure from 'components/controlpanel/WeightMeasureComponent.js';
 import WeightTotals from 'components/controlpanel/WeightTotalsComponent.js';
