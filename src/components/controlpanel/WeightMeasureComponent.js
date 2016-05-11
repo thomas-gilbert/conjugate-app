@@ -8,11 +8,11 @@ class WeightMeasureComponent extends React.Component {
 		};
 	}
 	changeMeasure() {
-		console.log(this, this.props);
+		this.props.toggleMeasure(this.state.weightMeasure);
 	}
 	render() {
 		return (
-			<button onPress={this.changeMeasure()}>{this.state.weightMeasure}</button>
+			<button onClick={this.changeMeasure.bind(this)}>{this.state.weightMeasure}</button>
 		);
 	}
 }

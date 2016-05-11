@@ -13,12 +13,13 @@ class ControlPanelComponent extends React.Component {
 		<div className="control-panel">
 			<button>Strict Mode</button>
 			<PercentageButton />
-			<WeightMeasure />
+			<WeightMeasure toggleMeasure={this.props.actions.toggleMeasure} />
 			<WeightTotals />
 		</div>
 	);
   }
 }
+
 
 ControlPanelComponent.displayName = 'ControlPanelComponent';
 

@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
 import controlpanel from './controlpanel'
+import weeks from './weeks'
 
 const conjugateApp = combineReducers({
-  controlpanel
+  controlpanel,
+  weeks
 })
 
 export default conjugateApp

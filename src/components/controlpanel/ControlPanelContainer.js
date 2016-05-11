@@ -1,7 +1,7 @@
-import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux'
 import * as actions from '../../actions';
-import ControlPanelComponent from '../controlpanel/ControlPanelComponent';
+import ControlPanelComponent from 'components/controlpanel/ControlPanelComponent';
 
 
 function mapStateToProps(state) {
@@ -16,6 +16,9 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-const ControlPanelContainer = connect(mapStateToProps, mapDispatchToProps)(ControlPanelComponent);
+const ControlPanelContainer = connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(ControlPanelComponent);
 
 export default ControlPanelContainer;
