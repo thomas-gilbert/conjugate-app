@@ -1,5 +1,5 @@
 const controlPanel = (state = 0, action) => {
-	switch (action.id) {
+	switch (action.type) {
 	case 'TOGGLE_MEASURE':
 		console.log('msg');
 		return weightMeasure(state, action);

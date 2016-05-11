@@ -3,7 +3,7 @@ require('styles/App.css');
 
 import React from 'react';
 
-import ControlPanelComponent from 'components/controlpanel/ControlPanelComponent.js';
+import ControlPanelContainer from 'components/controlpanel/ControlPanelContainer.js';
 import WeekComponent from 'components/week/WeekComponent.js';
 
 class MainComponent extends React.Component {
@@ -11,9 +11,7 @@ class MainComponent extends React.Component {
 		return (
 			<div className="index">
 				<div className="header">Conjugate Program Builder</div>
-				<div className="control-panel">
-					<ControlPanelComponent />
-				</div>
+				<ControlPanelContainer />
 				<div className="content">
 					<WeekComponent />
 				</div>

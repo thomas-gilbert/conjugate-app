@@ -1,6 +1,7 @@
+import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from '../../actions';
-import ControlPanelComponent from '../ControlPanelComponent';
+import ControlPanelComponent from '../controlpanel/ControlPanelComponent';
 
 
 function mapStateToProps(state) {
