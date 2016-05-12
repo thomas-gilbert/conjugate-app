@@ -13,7 +13,7 @@ class ControlPanelComponent extends React.Component {
 		<div className="control-panel">
 			<button>Strict Mode</button>
 			<PercentageButton />
-			<WeightMeasure toggleMeasure={this.props.actions.toggleMeasure} />
+			<WeightMeasure toggleMeasure={this.props.actions.toggleMeasure} weightMeasure={this.props.weightMeasure} />
 			<WeightTotals />
 		</div>
 	);

@@ -1,4 +1,8 @@
-const controlPanel = (state = {weightMeasure: 'KG'}, action) => {
+const initalState = {
+	weightMeasure: 'KG'
+}
+
+const controlPanel = (state = initalState, action) => {
 	switch (action.type) {
 	case 'TOGGLE_MEASURE':
 		var measure;
@@ -8,9 +12,9 @@ const controlPanel = (state = {weightMeasure: 'KG'}, action) => {
 			measure = 'LB'
 		}
 
-		return [...state, {
+		return Object.assign({}, state, {
 			weightMeasure: measure
-		}]
+		})
 	default:
 		return state
 	}
