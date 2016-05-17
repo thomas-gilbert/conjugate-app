@@ -12,16 +12,16 @@ class WeekComponent extends React.Component {
     return (
     	<ul className="week">
 	    	<div className="day">
-				<MaxEffortFormComponent />
+				<MaxEffortFormComponent day={1} weightMeasure={this.props.weightMeasure} />
 			</div>
 			<div className="day">
-				<MaxEffortFormComponent />
+				<MaxEffortFormComponent day={2} weightMeasure={this.props.weightMeasure} />
 			</div>
 			<div className="day">
-				<DynamicEffortFormComponent />
+				<DynamicEffortFormComponent weightMeasure={this.props.weightMeasure} />
 			</div>
 			<div className="day">
-				<DynamicEffortFormComponent />
+				<DynamicEffortFormComponent weightMeasure={this.props.weightMeasure} />
 			</div>
 		</ul>
     );

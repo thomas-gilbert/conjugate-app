@@ -5,7 +5,7 @@ const initalState = {
 const controlPanel = (state = initalState, action) => {
 	switch (action.type) {
 	case 'TOGGLE_MEASURE':
-		var measure;
+		let measure;
 		if (action.id === 'LB') {
 			measure = 'KG'
 		} else if (action.id === 'KG') {

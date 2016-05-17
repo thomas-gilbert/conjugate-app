@@ -3,33 +3,42 @@ import React from 'react';
 class WeightTotalsComponent extends React.Component {
 	constructor(props) {
 		super(props);
+		this.handleChange = this.handleChange.bind(this);
 		this.state = {
-			squattotal: props.squattotal,
-			deadlifttotal: props.deadlifttotal,
-			benchtotal: props.benchtotal
+			weightMeasure: props.weightMeasure,
+			squattotal: props.squattotal + props.weightMeasure,
+			deadlifttotal: props.deadlifttotal + props.weightMeasure,
+			benchtotal: props.benchtotal + props.weightMeasure
 		};
 	}
 	handleChange(e) {
-		this.state[e.target.name] = e.target.value;
+		this.setState({[e.target.name]: e.target.value});
 	}
-	changeMeasure() {
-		console.log(this.props.actions);
+	componentWillReceiveProps(newProps) {
+		if (newProps.weightMeasure != this.state.weightMeasure) {
+			this.setState({
+				weightMeasure: newProps.weightMeasure,
+				squattotal: 'Insert your max ' + newProps.weightMeasure,
+				deadlifttotal: 'Insert your max ' + newProps.weightMeasure,
+				benchtotal: 'Insert your max ' + newProps.weightMeasure
+			});
+		}
 	}
 	render() {
 		return (
 			<div className="weight-totals">
-				<input type="text" onChange={this.handleChange.bind(this)} name="squattotal" value={this.state.squattotal} className="input__small" />
-				<input type="text" onChange={this.handleChange.bind(this)} name="deadlifttotal" value={this.state.deadlifttotal} className="input__small" />
-				<input type="text" onChange={this.handleChange.bind(this)} name="benchtotal" value={this.state.benchtotal} className="input__small" />
+				<input type="text" onChange={this.handleChange} name="squattotal" value={this.state.squattotal} className="input__small" />
+				<input type="text" onChange={this.handleChange} name="deadlifttotal" value={this.state.deadlifttotal} className="input__small" />
+				<input type="text" onChange={this.handleChange} name="benchtotal" value={this.state.benchtotal} className="input__small" />
 			</div>
 		);
 	}
 }
 
 WeightTotalsComponent.defaultProps = {
-	squattotal: 'Insert your max KG',
-	deadlifttotal: 'Insert your max KG',
-	benchtotal: 'Insert your max KG'
+	squattotal: 'Insert your max ',
+	deadlifttotal: 'Insert your max ',
+	benchtotal: 'Insert your max '
 };
 
 export default WeightTotalsComponent;
