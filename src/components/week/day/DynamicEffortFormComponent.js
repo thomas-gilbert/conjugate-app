@@ -12,7 +12,7 @@ class DynamicEffortFormComponent extends React.Component {
   render() {
     return (
 		<form>
-			<h3>Dynamic effort day {this.props.day}</h3>
+			<h3>Dynamic effort - day {this.props.day}</h3>
 			<MainLiftComponent day={this.props.day} />
 			<label htmlFor="Main Lift">Main Lift</label>
 			<SelectExerciseComponent />

@@ -1,28 +1,20 @@
-'use strict';
-
 import React from 'react';
+
+import DeadliftSquatRadio from 'components/formelements/mainliftradio/DeadliftSquatRadioComponent.js';
+import BenchRadio from 'components/formelements/mainliftradio/BenchRadioComponent.js';
 
 class MainLiftRadioComponent extends React.Component {
   render() {
-  	// TODO: Make this nicer!!
-  	let deadliftLabel, deadlift, squatLabel, squat, benchLabel, bench;
-		if (this.props.day === 1) {
-			deadliftLabel = <label htmlFor="deadlift">Deadlift</label>
-			deadlift = <input type="radio" onChange={this.selectedRadio} name="deadlift" id="lowerDeadlift" value="Deadlift" />
-			squatLabel = <label htmlFor="squat">Squat</label>
-			squat = <input type="radio" onChange={this.selectedRadio} name="squat" id="lowerSquat" value="Squat" />
+  	let deadliftSquatRadio, benchRadio;
+		if (this.props.day === 1 || this.props.day === 3) {
+			deadliftSquatRadio = <DeadliftSquatRadio />
 		} else {
-			benchLabel = <label htmlFor="bench">Bench</label>
-			bench = <input type="radio" onChange={this.selectedRadio} name="bench" id="lowerDeadlift" value="Deadlift" />
+			benchRadio = <BenchRadio />
 		}
     return (
 		<div>
-			{benchLabel}
-			{bench}
-			{deadliftLabel}
-			{deadlift}
-			{squatLabel}
-			{squat}
+			{deadliftSquatRadio}
+			{benchRadio}
 		</div>
     );
   }

@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 import InputExerciseComponent from 'components/formelements/InputExerciseComponent.js';
 

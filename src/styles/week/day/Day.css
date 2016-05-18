@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+.day:nth-child(odd) {
+	clear: left;
+}
+
 .day label {
 	display: block;
 	margin: 12px 0;

@@ -1,7 +1,4 @@
-'use strict';
-
 import React from 'react';
-// import Formsy from 'formsy-react';
 
 require('styles/formelements/exercise.css');
 
