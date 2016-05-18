@@ -1,5 +1,7 @@
 const initalState = {
-	weightMeasure: 'KG'
+	weightMeasure: 'KG',
+	strictMode: true,
+	usingPercentages: false
 }
 
 const controlPanel = (state = initalState, action) => {
@@ -14,6 +16,14 @@ const controlPanel = (state = initalState, action) => {
 
 		return Object.assign({}, state, {
 			weightMeasure: measure
+		})
+	case 'TOGGLE_STRICT_MODE':
+		return Object.assign({}, state, {
+			strictMode: !action.id
+		})
+	case 'TOGGLE_USE_OF_PERCENTAGES':
+		return Object.assign({}, state, {
+			usingPercentages: !action.id
 		})
 	default:
 		return state

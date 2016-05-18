@@ -1,6 +1,3 @@
-require('normalize.css');
-require('styles/App.css');
-
 import React from 'react';
 
 import ControlPanelContainer from '../container/ControlPanelContainer.js';
@@ -10,7 +7,9 @@ class MainComponent extends React.Component {
 	render() {
 		return (
 			<div className="index">
-				<div className="header">Conjugate Program Builder</div>
+				<div className="top-bar">
+					<p className="menu-text">Conjugate Program Builder</p>
+				</div>
 				<ControlPanelContainer />
 				<div className="content">
 					<WeekComponent />

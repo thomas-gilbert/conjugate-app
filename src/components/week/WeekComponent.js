@@ -18,10 +18,10 @@ class WeekComponent extends React.Component {
 				<MaxEffortFormComponent day={2} weightMeasure={this.props.weightMeasure} />
 			</div>
 			<div className="day">
-				<DynamicEffortFormComponent weightMeasure={this.props.weightMeasure} />
+				<DynamicEffortFormComponent day={3} weightMeasure={this.props.weightMeasure} />
 			</div>
 			<div className="day">
-				<DynamicEffortFormComponent weightMeasure={this.props.weightMeasure} />
+				<DynamicEffortFormComponent day={4} weightMeasure={this.props.weightMeasure} />
 			</div>
 		</ul>
     );
