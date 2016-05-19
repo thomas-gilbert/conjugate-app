@@ -4,10 +4,10 @@ import InputExerciseComponent from 'components/formelements/InputExerciseCompone
 class AccessoriesComponent extends React.Component {
   render() {
     return (
-     <div>
-		<InputExerciseComponent />
-		<InputExerciseComponent />
-	</div>
+      <div>
+		    <InputExerciseComponent {...this.props}/>
+		    <InputExerciseComponent {...this.props}/>
+	    </div>
     );
   }
 }

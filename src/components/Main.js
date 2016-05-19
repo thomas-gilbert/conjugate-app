@@ -1,7 +1,7 @@
 import React from 'react';
 
-import ControlPanelContainer from '../container/ControlPanelContainer.js';
-import WeekComponent from 'components/week/WeekComponent.js';
+import ControlPanelContainer from '../container/ControlPanelContainer';
+import WeeksContainer from '../container/WeeksContainer';
 
 class MainComponent extends React.Component {
 	render() {
@@ -12,7 +12,7 @@ class MainComponent extends React.Component {
 				</div>
 				<ControlPanelContainer />
 				<div className="content">
-					<WeekComponent />
+					<WeeksContainer />
 				</div>
 			</div>
 		);
