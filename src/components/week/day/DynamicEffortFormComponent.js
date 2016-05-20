@@ -15,11 +15,11 @@ class DynamicEffortFormComponent extends React.Component {
 			<h3>Dynamic effort - day {this.props.day}</h3>
 			<MainLiftComponent day={this.props.day} />
 			<label htmlFor="Main Lift">Main Lift</label>
-			<SelectExerciseComponent />
+			<SelectExerciseComponent {...this.props}/>
 			<label htmlFor="Secondary Lift">Secondary Lift</label>
-			<SelectExerciseComponent />
+			<SelectExerciseComponent {...this.props}/>
 			<label htmlFor="Accessories">Accessories</label>
-			<AccessoriesComponent />
+			<AccessoriesComponent {...this.props}/>
 		</form>
     );
   }

@@ -16,7 +16,7 @@ class SelectExerciseComponent extends React.Component {
 				<select onChange={function() {}} name="exercise">
 					<option>Select Exercise</option>
 				</select>
-				<input type="text" onChange={this.handleChange} name="weight" value="KG" className="input__small" />
+				<input type="text" onChange={this.handleChange} name="weight" value={this.props.weightMeasure} className="input__small" />
 				<input type="text" onChange={this.handleChange} name="sets" value="Sets" className="input__small" />
 				<input type="text" onChange={this.handleChange} name="reps" value="Reps" className="input__small" />
 			</div>

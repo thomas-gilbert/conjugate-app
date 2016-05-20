@@ -8,24 +8,24 @@ import MaxEffortFormComponent from 'components/week/day/MaxEffortFormComponent.j
 import DynamicEffortFormComponent from 'components/week/day/DynamicEffortFormComponent.js';
 
 class WeekComponent extends React.Component {
-  render() {
+	render() {
     return (
     	<ul className="week">
 	    	<div className="day">
-				<MaxEffortFormComponent day={1} weightMeasure={this.props.weightMeasure} />
+				<MaxEffortFormComponent day={1} {...this.props} />
 			</div>
 			<div className="day">
-				<MaxEffortFormComponent day={2} weightMeasure={this.props.weightMeasure} />
+				<MaxEffortFormComponent day={2} {...this.props} />
 			</div>
 			<div className="day">
-				<DynamicEffortFormComponent day={3} weightMeasure={this.props.weightMeasure} />
+				<DynamicEffortFormComponent day={3} {...this.props} />
 			</div>
 			<div className="day">
-				<DynamicEffortFormComponent day={4} weightMeasure={this.props.weightMeasure} />
+				<DynamicEffortFormComponent day={4} {...this.props} />
 			</div>
 		</ul>
     );
-  }
+  };
 }
 
 WeekComponent.displayName = 'WeekComponent';
