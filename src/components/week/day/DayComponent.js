@@ -1,20 +1,30 @@
 'use strict';
 
 import React from 'react';
-import MaxEffortFormComponent from 'components/week/day/MaxEffortFormComponent.js';
-import DynamicEffortFormComponent from 'components/week/day/DynamicEffortFormComponent.js';
+import AccessoriesComponent from 'components/formelements/AccessoriesComponent.js';
+import SelectExerciseComponent from 'components/formelements/SelectExerciseComponent.js';
+import MainLiftComponent from 'components/formelements/MainLiftRadioComponent.js';
 
 require('styles/week/day/Day.css');
 
 class DayComponent extends React.Component {
   render() {
-  	let dayComponent = <MaxEffortFormComponent day={1} {...this.props} />;
+  	let dayTypeTitle = 'Max effort';
   	if (this.props.dayType === 'dynamic') {
-  		dayComponent = <DynamicEffortFormComponent day={1} {...this.props} />
+  		dayTypeTitle = 'Dynamic effort'
   	}
     return (
 		<li className="day">
-			{dayComponent}
+			<form>
+				<h3>{dayTypeTitle} - day {this.props.day}</h3>
+				<MainLiftComponent day={this.props.day} addMainLift={this.props.actions.addMainLift} />
+				<label htmlFor="Main Lift">Main Lift</label>
+				<SelectExerciseComponent {...this.props}/>
+				<label htmlFor="Secondary Lift">Secondary Lift</label>
+				<SelectExerciseComponent {...this.props}/>
+				<label htmlFor="Accessories">Accessories</label>
+				<AccessoriesComponent {...this.props}/>
+			</form>
 		</li>
     );
   }
