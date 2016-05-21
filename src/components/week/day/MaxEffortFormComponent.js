@@ -22,7 +22,7 @@ class MaxEffortFormComponent extends React.Component {
 		return (
 			<form>
 				<h3>Max effort - day {this.props.day}</h3>
-				<MainLiftComponent day={this.props.day} />
+				<MainLiftComponent day={this.props.day} addMainLift={this.props.actions.addMainLift} />
 				<label htmlFor="Main Lift">Main Lift</label>
 				<SelectExerciseComponent {...this.props}/>
 				<label htmlFor="Secondary Lift">Secondary Lift</label>

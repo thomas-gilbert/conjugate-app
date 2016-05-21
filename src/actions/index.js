@@ -18,3 +18,12 @@ export const togglePercentages = (id) => {
     id
   }
 }
+
+export const addMainLift = (name, day, week) => {
+  return {
+    type: 'ADD_MAIN_LIFT',
+    name,
+    day,
+    week
+  }
+}

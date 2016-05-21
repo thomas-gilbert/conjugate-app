@@ -1,0 +1,54 @@
+{
+	"bench" : {
+		"bench_Press" : "Bench Press",
+		"wide_grip_bench" : "Wide Grip Bench",
+		"close_grip_bench" : "Close Grip Bench",
+		"medium_grip_bench" : "Medium Grip Bench",
+		"dumbbell_bench_press" : "Dumbbell Bench Press",
+		"1_board_press" : "1\" Board Press",
+		"2_board_press" : "2\" Board Press",
+		"3_board_press" : "3\" Board Press",
+		"floor_press" : "Floor Press",
+		"rack_press" : "Rack Press",
+		"incline_bench_press" : "Incline Bench Press",
+		"decline_bench_press" : "Decline Bench Press",
+		"reverse_bench_press" : "Reverse Bench Press",
+		"bench_press_with_chains" : "Bench press with chains",
+		"bench_press_with_bands" : "Bench press with bands"
+
+	},
+	"deadlift" : {
+		"conventional_deadlift" : "Conventional Deadlift",
+		"1_block_pull_conventional" : "1\" Block Pull (Conventional)",
+		"2_block_pull_conventional" : "2\" Block Pull (Conventional)",
+		"3_block_pull_conventional" : "3\" Block Pull (Conventional)",
+		"4_block_pull_conventional" : "4\" Block Pull (Conventional)",
+		"sumo_deadlift" : "Sumo Deadlift",
+		"1_block_pull_sumo" : "1\" Block Pull (sumo)",
+		"2_block_pull_sumo" : "2\" Block Pull (sumo)",
+		"3_block_pull_sumo" : "3\" Block Pull (sumo)",
+		"4_block_pull_sumo" : "4\" Block Pull (sumo)",
+		"2_rack_pull" : "2\" Rack Pull",
+		"4_rack_pull" : "4\" Rack Pull",
+		"6_rack_pull" : "6\" Rack Pull",
+		"romanian_deadlift" : "Romanian Deadlift",
+		"banded_deadlift" : "Banded Deadlift",
+		"snatch_grip_deadlift" : "Snatch-grip Deadlift",
+		"double_overhand_deadlift" : "Double overhand Deadlift",
+		"mixed_grip_deadlift" : "Mixed-grip Deadlift",
+		"deadlift_with_chains" : "Deadlift with chains"
+	},
+	"squat" : {
+		"high_box_squat": "High Box Squat",
+		"parallel_box_squat": "Parallel Box Squat",
+		"below_parallel_box_squat": "Below parallel Box Squat",
+		"front_box_squat": "Front Box Squat",
+		"back_squat": "Back Squat",
+		"front_squat": "Front Squat",
+		"belt_squat": "Belt Squat",
+		"safety_squat": "Safety Squat",
+		"cambered_bar_squat": "Cambered Bar Squat",
+		"zercher_squat": "Zercher Squat",
+		"good_morning_squat": "Good-morning Squat"
+	}
+}

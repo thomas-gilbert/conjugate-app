@@ -7,9 +7,9 @@ class MainLiftRadioComponent extends React.Component {
   render() {
   	let deadliftSquatRadio, benchRadio;
 		if (this.props.day === 1 || this.props.day === 3) {
-			deadliftSquatRadio = <DeadliftSquatRadio />
+			deadliftSquatRadio = <DeadliftSquatRadio addMainLift={this.props.addMainLift} day={this.props.day} />
 		} else {
-			benchRadio = <BenchRadio />
+			benchRadio = <BenchRadio addMainLift={this.props.addMainLift} day={this.props.day} />
 		}
     return (
 		<div>

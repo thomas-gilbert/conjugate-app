@@ -9,23 +9,23 @@ import DynamicEffortFormComponent from 'components/week/day/DynamicEffortFormCom
 
 class WeekComponent extends React.Component {
 	render() {
-    return (
-    	<ul className="week">
-	    	<div className="day">
-				<MaxEffortFormComponent day={1} {...this.props} />
-			</div>
-			<div className="day">
-				<MaxEffortFormComponent day={2} {...this.props} />
-			</div>
-			<div className="day">
-				<DynamicEffortFormComponent day={3} {...this.props} />
-			</div>
-			<div className="day">
-				<DynamicEffortFormComponent day={4} {...this.props} />
-			</div>
-		</ul>
-    );
-  };
+	    return (
+			<ul className="week">
+				<div className="day">
+					<MaxEffortFormComponent day={1} {...this.props} />
+				</div>
+				<div className="day">
+					<MaxEffortFormComponent day={2} {...this.props} />
+				</div>
+				<div className="day">
+					<DynamicEffortFormComponent day={3} {...this.props} />
+				</div>
+				<div className="day">
+					<DynamicEffortFormComponent day={4} {...this.props} />
+				</div>
+			</ul>
+		);
+  }
 }
 
 WeekComponent.displayName = 'WeekComponent';
