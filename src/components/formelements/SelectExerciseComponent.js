@@ -14,25 +14,9 @@ class SelectExerciseComponent extends React.Component {
 	handleChange(e) {
 		this.state[e.target.name] = e.target.value;
 	}
-	loadExercises() {
-		$.ajax({
-			url: '/data/exercises.json',
-			dataType: 'json',
-			cache: false,
-			success: function(data) {
-				this.setState({data: data});
-			}.bind(this),
-			error: function(xhr, status, err) {
-				console.error(status, err.toString());
-			}.bind(this)
-		});
-	}
-	componentDidMount() {
-		this.loadExercises();
-	}
 	render() {
 		let array = [];
-		$.each(this.state.data.bench, function(key, value){
+		$.each(this.state.data.bench, (key, value) => {
 			array.push(
 				<option key={key}>
 					{value}
