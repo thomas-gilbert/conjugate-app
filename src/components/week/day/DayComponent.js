@@ -16,8 +16,8 @@ class DayComponent extends React.Component {
     return (
 		<li className="day">
 			<form>
-				<h3>{dayTypeTitle} - day {this.props.day}</h3>
-				<MainLiftComponent day={this.props.day} addMainLift={this.props.actions.addMainLift} />
+				<h3>{dayTypeTitle} - day {this.props.index}</h3>
+				<MainLiftComponent index={this.props.index} day={this.props.day} addMainLift={this.props.actions.addMainLift} addExerciseGroup={this.props.actions.addExerciseGroup} />
 				<label htmlFor="Main Lift">Main Lift</label>
 				<SelectExerciseComponent {...this.props}/>
 				<label htmlFor="Secondary Lift">Secondary Lift</label>

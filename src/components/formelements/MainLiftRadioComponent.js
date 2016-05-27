@@ -6,10 +6,10 @@ import BenchRadio from 'components/formelements/mainliftradio/BenchRadioComponen
 class MainLiftRadioComponent extends React.Component {
   render() {
   	let deadliftSquatRadio, benchRadio;
-		if (this.props.day === 1 || this.props.day === 3) {
-			deadliftSquatRadio = <DeadliftSquatRadio addMainLift={this.props.addMainLift} day={this.props.day} />
+		if (this.props.index === 0 || this.props.index === 2) {
+			deadliftSquatRadio = <DeadliftSquatRadio {...this.props} />
 		} else {
-			benchRadio = <BenchRadio addMainLift={this.props.addMainLift} day={this.props.day} />
+			benchRadio = <BenchRadio {...this.props} />
 		}
     return (
 		<div>

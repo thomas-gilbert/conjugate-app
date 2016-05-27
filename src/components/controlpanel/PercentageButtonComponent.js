@@ -1,9 +1,8 @@
 import React from 'react';
-import { connect } from 'react-redux';
 
 class PercentageButtonComponent extends React.Component {
 	usePercentages() {
-		this.props.dispatch(this.props.togglePercentages(this.props.usingPercentages));
+		this.props.togglePercentages(this.props.usingPercentages);
 	}
 	render() {
 		let buttonText = this.props.usingPercentages ? 'Weights in percentages %' :  'Weights in ' + this.props.weightMeasure;
@@ -16,4 +15,4 @@ class PercentageButtonComponent extends React.Component {
 PercentageButtonComponent.defaultProps = {
 };
 
-export default connect()(PercentageButtonComponent);
+export default PercentageButtonComponent;

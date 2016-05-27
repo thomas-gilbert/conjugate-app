@@ -6,7 +6,9 @@ import WeekComponent from 'components/week/WeekComponent';
 
 function mapStateToProps(state) {
   return {
-  	weightMeasure: state.controlpanel.weightMeasure
+  	weightMeasure: state.controlpanel.weightMeasure,
+  	exercises: state.exercises,
+  	weeks: state.weeks
   }
 }
 

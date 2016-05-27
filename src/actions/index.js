@@ -19,6 +19,15 @@ export const togglePercentages = (id) => {
   }
 }
 
+export const addExerciseGroup = (exercise_group, day, week) => {
+  return {
+    type: 'ADD_EXERCISE_GROUP',
+    exercise_group,
+    day,
+    week
+  }
+}
+
 export const addMainLift = (name, day, week) => {
   return {
     type: 'ADD_MAIN_LIFT',

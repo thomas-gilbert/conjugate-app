@@ -1,9 +1,8 @@
 import React from 'react';
-import { connect } from 'react-redux';
 
 class WeightMeasureComponent extends React.Component {
 	changeMeasure() {
-		this.props.dispatch(this.props.toggleMeasure(this.props.weightMeasure));
+		this.props.toggleMeasure(this.props.weightMeasure);
 	}
 	render() {
 		return (
@@ -12,4 +11,4 @@ class WeightMeasureComponent extends React.Component {
 	}
 }
 
-export default connect()(WeightMeasureComponent);
+export default WeightMeasureComponent;

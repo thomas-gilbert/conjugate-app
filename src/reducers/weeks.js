@@ -3,22 +3,26 @@ const initalState = {
 	weeks: [
 		{
 			days: {
-				day1: {
+				0: {
+					exercise_group: null,
 					mainlift: null,
 					secondarylift: null,
 					accessories: []
 				},
-				day2: {
+				1: {
+					exercise_group: 'bench',
 					mainlift: null,
 					secondarylift: null,
 					accessories: []
 				},
-				day3: {
+				2: {
+					exercise_group: null,
 					mainlift: null,
 					secondarylift: null,
 					accessories: []
 				},
-				day4: {
+				3: {
+					exercise_group: 'bench',
 					mainlift: null,
 					secondarylift: null,
 					accessories: []
@@ -37,12 +41,18 @@ const weeks = (state = initalState, action) => {
 		return Object.assign({}, state, {
 			weeks: [{
 				days: {
-					['day'+action.day]: {
+					[action.day]: {
 						mainlift: action.name
 					}
 				}
 			}]
 		})
+	case 'ADD_EXERCISE_GROUP':
+	console.log(action.exercise_group);
+		let newState = Object.assign({}, state);
+		debugger
+		newState.weeks[0].days[action.day].exercise_group = action.exercise_group;
+		return newState
 	case 'ADD_SECONDARY_LIFT':
 	// todo
 		return state

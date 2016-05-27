@@ -12,16 +12,16 @@ class WeightTotalsComponent extends React.Component {
 		};
 	}
 	handleChange(e) {
-		this.setState({[e.target.name]: e.target.value});
+		// this.setState({[e.target.name]: e.target.value});
 	}
 	componentWillReceiveProps(newProps) {
 		if (newProps.weightMeasure != this.state.weightMeasure) {
-			this.setState({
-				weightMeasure: newProps.weightMeasure,
-				squattotal: 'Insert your max ' + newProps.weightMeasure,
-				deadlifttotal: 'Insert your max ' + newProps.weightMeasure,
-				benchtotal: 'Insert your max ' + newProps.weightMeasure
-			});
+			// this.setState({
+			// 	weightMeasure: newProps.weightMeasure,
+			// 	squattotal: 'Insert your max ' + newProps.weightMeasure,
+			// 	deadlifttotal: 'Insert your max ' + newProps.weightMeasure,
+			// 	benchtotal: 'Insert your max ' + newProps.weightMeasure
+			// });
 		}
 	}
 	render() {

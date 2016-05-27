@@ -1,16 +1,23 @@
 import React from 'react';
 
 class DeadliftSquatRadioComponent extends React.Component {
-  render() {
-    return (
-		<div>
-			<label htmlFor="deadlift">Deadlift</label>
-			<input type="radio" onChange={this.selectedRadio} name="deadlift" id="lowerDeadlift" value="Deadlift" />
-			<label htmlFor="squat">Squat</label>
-			<input type="radio" onChange={this.selectedRadio} name="squat" id="lowerSquat" value="Squat" />
-		</div>
-    );
-  }
+
+	render() {
+		let addExerciseGroup = this.props.addExerciseGroup,
+			day = this.props.index,
+			week = 0,
+			onChange = (e) => {
+				addExerciseGroup(e.target.value.toLowerCase(), day, week);
+			};
+		return (
+			<div>
+				<label htmlFor="mainlift">Deadlift</label>
+				<input type="radio" onClick={onChange} name="mainlift" value="Deadlift" />
+				<label htmlFor="mainlift">Squat</label>
+				<input type="radio" onClick={onChange} name="mainlift" value="Squat" />
+			</div>
+		);
+	}
 }
 
 DeadliftSquatRadioComponent.displayName = 'DeadliftSquatRadioComponent';

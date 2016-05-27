@@ -1,9 +1,8 @@
 import React from 'react';
-import { connect } from 'react-redux';
 
 class WeightMeasureComponent extends React.Component {
 	changeMode() {
-		this.props.dispatch(this.props.toggleStrictMode(this.props.strictMode));
+		this.props.toggleStrictMode(this.props.strictMode);
 	}
 	render() {
 		let buttonText = this.props.strictMode ? 'Disable Strict Mode' : 'Enable Strict Mode';
@@ -13,4 +12,4 @@ class WeightMeasureComponent extends React.Component {
 	}
 }
 
-export default connect()(WeightMeasureComponent);
+export default WeightMeasureComponent;
