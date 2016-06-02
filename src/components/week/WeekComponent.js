@@ -8,7 +8,6 @@ import DayComponent from 'components/week/day/DayComponent.js';
 
 class WeekComponent extends React.Component {
 	render() {
-		debugger
 	    return (
 			<ul className="week">
 				<DayComponent day={this.props.weeks.weeks[0].days[0]} index={0} {...this.props} />

@@ -5,17 +5,17 @@ import WeekComponent from 'components/week/WeekComponent';
 
 
 function mapStateToProps(state) {
-  return {
-  	weightMeasure: state.controlpanel.weightMeasure,
-  	exercises: state.exercises,
-  	weeks: state.weeks
-  }
+	return {
+		weightMeasure: state.controlpanel.weightMeasure,
+		exercises: state.exercises,
+		weeks: state.weeks
+	}
 }
 
 function mapDispatchToProps(dispatch) {
-  return {
-	  actions: bindActionCreators(actions, dispatch)
-  };
+	return {
+		actions: bindActionCreators(actions, dispatch)
+	};
 }
 
 const WeekContainer = connect(

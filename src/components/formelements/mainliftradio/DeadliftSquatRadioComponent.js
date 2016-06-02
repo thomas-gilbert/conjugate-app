@@ -3,7 +3,7 @@ import React from 'react';
 class DeadliftSquatRadioComponent extends React.Component {
 
 	render() {
-		let addExerciseGroup = this.props.addExerciseGroup,
+		let addExerciseGroup = this.props.actions.addExerciseGroup,
 			day = this.props.index,
 			week = 0,
 			onChange = (e) => {

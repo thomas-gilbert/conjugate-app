@@ -33,25 +33,24 @@ const initalState = {
 };
 
 const weeks = (state = initalState, action) => {
+	let newState;
+
 	switch (action.type) {
 	case 'ADD_WEEK':
 	// todo
 		return state
-	case 'ADD_MAIN_LIFT':
-		return Object.assign({}, state, {
-			weeks: [{
-				days: {
-					[action.day]: {
-						mainlift: action.name
-					}
-				}
-			}]
-		})
 	case 'ADD_EXERCISE_GROUP':
-	console.log(action.exercise_group);
-		let newState = Object.assign({}, state);
-		debugger
+		newState = Object.assign({}, state);
 		newState.weeks[0].days[action.day].exercise_group = action.exercise_group;
+		return newState
+	case 'ADD_MAIN_LIFT':
+		newState = Object.assign({}, state);
+		newState.weeks[0].days[action.day].mainlift = {
+			exercise: action.info.exercise,
+			weight: action.info.weight,
+			sets: action.info.sets,
+			reps: action.info.reps
+		};
 		return newState
 	case 'ADD_SECONDARY_LIFT':
 	// todo

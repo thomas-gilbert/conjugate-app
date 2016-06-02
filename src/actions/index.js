@@ -28,10 +28,10 @@ export const addExerciseGroup = (exercise_group, day, week) => {
   }
 }
 
-export const addMainLift = (name, day, week) => {
+export const addMainLift = (info, day, week) => {
   return {
     type: 'ADD_MAIN_LIFT',
-    name,
+    info,
     day,
     week
   }
